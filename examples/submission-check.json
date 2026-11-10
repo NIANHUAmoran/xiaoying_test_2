@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-11-11T00:51:46.969302+08:00",
+  "all_passed": true,
+  "root_entries": [
+    ".env.example",
+    ".gitignore",
+    "README.md",
+    "data",
+    "docs",
+    "examples",
+    "requirements.txt",
+    "src",
+    "tests"
+  ],
+  "documents": [
+    "01-requirements.md",
+    "02-solution.md",
+    "03-evaluation.md",
+    "04-ai-usage.md",
+    "05-retrospective.md"
+  ],
+  "evidence_groups": 16,
+  "offline_runs": 13,
+  "live_paths": 3,
+  "unit_tests": 30,
+  "trace_matches_actual_output": true,
+  "resource_ledgers_consistent": true,
+  "duplicate_no_extra_charges": true,
+  "resume_preserves_success": true,
+  "document_links_valid": true
+}

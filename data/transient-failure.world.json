@@ -1,0 +1,58 @@
+{
+  "simulation_start": "2026-11-11T09:00:00+08:00",
+  "materials": [
+    {
+      "id": "A01",
+      "title": "城市晨跑片段",
+      "topics": [
+        "健康生活",
+        "运动"
+      ],
+      "description": "合成的授权视频素材"
+    },
+    {
+      "id": "A02",
+      "title": "健康早餐片段",
+      "topics": [
+        "健康生活",
+        "饮食"
+      ],
+      "description": "合成的授权视频素材"
+    }
+  ],
+  "variants": {
+    "premium": {
+      "cost": 10,
+      "minutes": 6,
+      "description": "完整脚本，较高制作投入"
+    },
+    "lean": {
+      "cost": 6,
+      "minutes": 3,
+      "description": "精简脚本，复用现有素材"
+    },
+    "basic": {
+      "cost": 4,
+      "minutes": 2,
+      "description": "最简脚本，仅保留核心内容"
+    }
+  },
+  "fees": {
+    "search_materials": {
+      "cost": 0,
+      "minutes": 1
+    },
+    "save_plan": {
+      "cost": 2,
+      "minutes": 1
+    }
+  },
+  "failures": [
+    {
+      "tool": "generate_script",
+      "variant": "premium",
+      "mode": "once",
+      "minutes": 1
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "source_output": "resume.output.json",
+  "request_id": "test2-resume",
+  "mode": "mock",
+  "model": "offline-mock",
+  "generated_at": "2026-11-10T16:51:33.344324+00:00",
+  "trace": [
+    {
+      "step": 1,
+      "actor": "model",
+      "action": "generate_script",
+      "arguments": {
+        "variant": "premium"
+      },
+      "basis": "当前估算可行，执行尚未成功的脚本步骤",
+      "observation": {
+        "ok": true,
+        "variant": "premium",
+        "script_id": "script-7a0edebea0272fc7",
+        "material_ids": [
+          "A01",
+          "A02"
+        ],
+        "script": "主题：健康生活。开场展示 城市晨跑片段；讲解主题要点；结尾邀请观众参与。版本：premium。",
+        "charged": 10,
+        "elapsed_minutes": 6,
+        "cached": false
+      },
+      "next_action": "save_plan"
+    },
+    {
+      "step": 2,
+      "actor": "model",
+      "action": "save_plan",
+      "arguments": {
+        "variant": "premium"
+      },
+      "basis": "脚本已生成，保存方案",
+      "observation": {
+        "ok": true,
+        "plan_id": "plan-ad2b199f82fb6aa6d626",
+        "variant": "premium",
+        "theme": "健康生活",
+        "budget": 20,
+        "deadline": "2026-11-11T10:00:00+08:00",
+        "script": {
+          "ok": true,
+          "variant": "premium",
+          "script_id": "script-7a0edebea0272fc7",
+          "material_ids": [
+            "A01",
+            "A02"
+          ],
+          "script": "主题：健康生活。开场展示 城市晨跑片段；讲解主题要点；结尾邀请观众参与。版本：premium。"
+        },
+        "total_cost": 12,
+        "completed_at": "2026-11-11T09:09:00+08:00",
+        "charged": 2,
+        "elapsed_minutes": 1,
+        "cached": false
+      },
+      "next_action": "finish"
+    },
+    {
+      "step": 3,
+      "actor": "model",
+      "action": "finish",
+      "arguments": {},
+      "basis": "保存工具已返回真实方案，结束任务",
+      "observation": {
+        "finished": true
+      },
+      "next_action": null
+    }
+  ]
+}

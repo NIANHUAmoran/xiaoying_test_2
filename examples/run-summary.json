@@ -1,0 +1,106 @@
+[
+  {
+    "scenario": "normal",
+    "status": "completed",
+    "reason": null,
+    "exit_code": 0,
+    "total_cost": 12,
+    "mode": "mock"
+  },
+  {
+    "scenario": "duplicate",
+    "status": "completed",
+    "reason": null,
+    "exit_code": 0,
+    "total_cost": 12,
+    "mode": "mock"
+  },
+  {
+    "scenario": "missing-budget",
+    "status": "needs_information",
+    "reason": "missing_required_input",
+    "exit_code": 0,
+    "total_cost": 0,
+    "mode": "validation"
+  },
+  {
+    "scenario": "missing-deadline",
+    "status": "needs_information",
+    "reason": "missing_required_input",
+    "exit_code": 0,
+    "total_cost": 0,
+    "mode": "validation"
+  },
+  {
+    "scenario": "over-budget",
+    "status": "completed",
+    "reason": null,
+    "exit_code": 0,
+    "total_cost": 8,
+    "mode": "mock"
+  },
+  {
+    "scenario": "no-feasible",
+    "status": "incomplete",
+    "reason": "budget_exceeded",
+    "exit_code": 1,
+    "total_cost": 0,
+    "mode": "mock"
+  },
+  {
+    "scenario": "deadline",
+    "status": "completed",
+    "reason": null,
+    "exit_code": 0,
+    "total_cost": 8,
+    "mode": "mock"
+  },
+  {
+    "scenario": "deadline-failure",
+    "status": "incomplete",
+    "reason": "deadline_exceeded",
+    "exit_code": 1,
+    "total_cost": 0,
+    "mode": "mock"
+  },
+  {
+    "scenario": "tool-failure",
+    "status": "incomplete",
+    "reason": "tool_failure",
+    "exit_code": 1,
+    "total_cost": 0,
+    "mode": "mock"
+  },
+  {
+    "scenario": "transient-failure",
+    "status": "completed",
+    "reason": null,
+    "exit_code": 0,
+    "total_cost": 8,
+    "mode": "mock"
+  },
+  {
+    "scenario": "save-failure",
+    "status": "incomplete",
+    "reason": "tool_failure",
+    "exit_code": 1,
+    "total_cost": 10,
+    "mode": "mock"
+  },
+  {
+    "scenario": "resume-before",
+    "status": "incomplete",
+    "reason": "step_limit",
+    "exit_code": 1,
+    "total_cost": 0,
+    "mode": "mock"
+  },
+  {
+    "scenario": "resume",
+    "status": "completed",
+    "reason": null,
+    "exit_code": 0,
+    "total_cost": 12,
+    "mode": "mock"
+  }
+]

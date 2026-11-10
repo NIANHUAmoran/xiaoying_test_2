@@ -1,0 +1,31 @@
+{
+  "request_id": "test2-missing-budget",
+  "status": "needs_information",
+  "missing_fields": [
+    "budget"
+  ],
+  "reason": "missing_required_input",
+  "task_plan": [],
+  "steps": {},
+  "total_cost": 0,
+  "saved_plan": null,
+  "trace": [
+    {
+      "step": 1,
+      "actor": "runtime",
+      "action": "validate_input",
+      "arguments": {},
+      "basis": "必填约束缺失，停止并请求补充",
+      "observation": {
+        "missing_fields": [
+          "budget"
+        ]
+      },
+      "next_action": null
+    }
+  ],
+  "model_calls": 0,
+  "mode": "validation",
+  "model": null,
+  "generated_at": "2026-11-10T16:51:31.721285+00:00"
+}

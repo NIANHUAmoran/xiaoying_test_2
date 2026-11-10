@@ -1,0 +1,1 @@
+# Python 3.12+. Standard library only; no pip dependencies.

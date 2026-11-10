@@ -1,0 +1,142 @@
+{
+  "checked_at": "2026-11-11T00:46:35.021916+08:00",
+  "all_passed": true,
+  "checks": [
+    {
+      "scenario": "normal",
+      "model": "qwen3.8-max",
+      "status": "completed",
+      "steps": 5,
+      "total_cost": 12,
+      "variant": "premium",
+      "elapsed_minutes": 8,
+      "plan_count": 1,
+      "database_consistent": true,
+      "observed_tool_failures": 0,
+      "recovery_action": null,
+      "actions": [
+        {
+          "action": "search_materials",
+          "arguments": {}
+        },
+        {
+          "action": "estimate_cost",
+          "arguments": {
+            "variant": "premium"
+          }
+        },
+        {
+          "action": "generate_script",
+          "arguments": {
+            "variant": "premium"
+          }
+        },
+        {
+          "action": "save_plan",
+          "arguments": {
+            "variant": "premium"
+          }
+        },
+        {
+          "action": "finish",
+          "arguments": {}
+        }
+      ]
+    },
+    {
+      "scenario": "over-budget",
+      "model": "qwen3.8-max",
+      "status": "completed",
+      "steps": 6,
+      "total_cost": 8,
+      "variant": "lean",
+      "elapsed_minutes": 5,
+      "plan_count": 1,
+      "database_consistent": true,
+      "observed_tool_failures": 0,
+      "recovery_action": null,
+      "actions": [
+        {
+          "action": "search_materials",
+          "arguments": {}
+        },
+        {
+          "action": "estimate_cost",
+          "arguments": {
+            "variant": "premium"
+          }
+        },
+        {
+          "action": "estimate_cost",
+          "arguments": {
+            "variant": "lean"
+          }
+        },
+        {
+          "action": "generate_script",
+          "arguments": {
+            "variant": "lean"
+          }
+        },
+        {
+          "action": "save_plan",
+          "arguments": {
+            "variant": "lean"
+          }
+        },
+        {
+          "action": "finish",
+          "arguments": {}
+        }
+      ]
+    },
+    {
+      "scenario": "transient-failure",
+      "model": "qwen3.8-max",
+      "status": "completed",
+      "steps": 6,
+      "total_cost": 12,
+      "variant": "premium",
+      "elapsed_minutes": 9,
+      "plan_count": 1,
+      "database_consistent": true,
+      "observed_tool_failures": 1,
+      "recovery_action": "generate_script",
+      "actions": [
+        {
+          "action": "search_materials",
+          "arguments": {}
+        },
+        {
+          "action": "estimate_cost",
+          "arguments": {
+            "variant": "premium"
+          }
+        },
+        {
+          "action": "generate_script",
+          "arguments": {
+            "variant": "premium"
+          }
+        },
+        {
+          "action": "generate_script",
+          "arguments": {
+            "variant": "premium"
+          }
+        },
+        {
+          "action": "save_plan",
+          "arguments": {
+            "variant": "premium"
+          }
+        },
+        {
+          "action": "finish",
+          "arguments": {}
+        }
+      ]
+    }
+  ],
+  "scope": "Three actual model runs; no claim of statistical reliability."
+}

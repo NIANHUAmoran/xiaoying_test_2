@@ -1,0 +1,22 @@
+{
+  "source_output": "missing-budget.output.json",
+  "request_id": "test2-missing-budget",
+  "mode": "validation",
+  "model": null,
+  "generated_at": "2026-11-10T16:51:31.721285+00:00",
+  "trace": [
+    {
+      "step": 1,
+      "actor": "runtime",
+      "action": "validate_input",
+      "arguments": {},
+      "basis": "必填约束缺失，停止并请求补充",
+      "observation": {
+        "missing_fields": [
+          "budget"
+        ]
+      },
+      "next_action": null
+    }
+  ]
+}

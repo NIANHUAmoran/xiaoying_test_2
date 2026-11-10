@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-11-11T00:51:33.981766+08:00",
+  "tests_run": 30,
+  "failures": 0,
+  "errors": 0,
+  "scenarios": 13,
+  "elapsed_seconds": 2.67,
+  "live_calls_performed": false,
+  "all_passed": true
+}

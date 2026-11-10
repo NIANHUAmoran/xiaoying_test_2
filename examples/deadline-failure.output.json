@@ -1,0 +1,389 @@
+{
+  "request_id": "test2-deadline-failure",
+  "status": "incomplete",
+  "reason": "deadline_exceeded",
+  "missing_fields": [],
+  "mode": "mock",
+  "model": "offline-mock",
+  "generated_at": "2026-11-10T16:51:32.545472+00:00",
+  "max_steps": 16,
+  "termination": "finished",
+  "resumed": false,
+  "duplicate": false,
+  "task_plan": [
+    {
+      "step": "search_materials",
+      "depends_on": [],
+      "status": "succeeded"
+    },
+    {
+      "step": "estimate_cost:basic",
+      "depends_on": [
+        "search_materials"
+      ],
+      "status": "succeeded"
+    },
+    {
+      "step": "generate_script:basic",
+      "depends_on": [
+        "estimate_cost:basic"
+      ],
+      "status": "not_started"
+    },
+    {
+      "step": "save_plan:basic",
+      "depends_on": [
+        "generate_script:basic"
+      ],
+      "status": "not_started"
+    }
+  ],
+  "steps": {
+    "search_materials": {
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "materials": [
+          {
+            "id": "A01",
+            "title": "城市晨跑片段",
+            "topics": [
+              "健康生活",
+              "运动"
+            ],
+            "description": "合成的授权视频素材"
+          },
+          {
+            "id": "A02",
+            "title": "健康早餐片段",
+            "topics": [
+              "健康生活",
+              "饮食"
+            ],
+            "description": "合成的授权视频素材"
+          }
+        ]
+      }
+    },
+    "estimate_cost:premium": {
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "variant": "premium",
+        "projected_total": 12,
+        "spent_so_far": 0,
+        "remaining_cost": 12,
+        "projected_finish": "2026-11-11T09:08:00+08:00",
+        "remaining_minutes": 7,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 5,
+        "feasible": false
+      }
+    },
+    "estimate_cost:lean": {
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "variant": "lean",
+        "projected_total": 8,
+        "spent_so_far": 0,
+        "remaining_cost": 8,
+        "projected_finish": "2026-11-11T09:05:00+08:00",
+        "remaining_minutes": 4,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 2,
+        "feasible": false
+      }
+    },
+    "estimate_cost:basic": {
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "variant": "basic",
+        "projected_total": 6,
+        "spent_so_far": 0,
+        "remaining_cost": 6,
+        "projected_finish": "2026-11-11T09:04:00+08:00",
+        "remaining_minutes": 3,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 1,
+        "feasible": false
+      }
+    }
+  },
+  "quotes": {
+    "premium": {
+      "ok": true,
+      "variant": "premium",
+      "projected_total": 12,
+      "spent_so_far": 0,
+      "remaining_cost": 12,
+      "projected_finish": "2026-11-11T09:08:00+08:00",
+      "remaining_minutes": 7,
+      "budget_gap": 0,
+      "deadline_gap_minutes": 5,
+      "feasible": false
+    },
+    "lean": {
+      "ok": true,
+      "variant": "lean",
+      "projected_total": 8,
+      "spent_so_far": 0,
+      "remaining_cost": 8,
+      "projected_finish": "2026-11-11T09:05:00+08:00",
+      "remaining_minutes": 4,
+      "budget_gap": 0,
+      "deadline_gap_minutes": 2,
+      "feasible": false
+    },
+    "basic": {
+      "ok": true,
+      "variant": "basic",
+      "projected_total": 6,
+      "spent_so_far": 0,
+      "remaining_cost": 6,
+      "projected_finish": "2026-11-11T09:04:00+08:00",
+      "remaining_minutes": 3,
+      "budget_gap": 0,
+      "deadline_gap_minutes": 1,
+      "feasible": false
+    }
+  },
+  "tool_results": [
+    {
+      "action": "search_materials",
+      "arguments": {},
+      "result": {
+        "ok": true,
+        "materials": [
+          {
+            "id": "A01",
+            "title": "城市晨跑片段",
+            "topics": [
+              "健康生活",
+              "运动"
+            ],
+            "description": "合成的授权视频素材"
+          },
+          {
+            "id": "A02",
+            "title": "健康早餐片段",
+            "topics": [
+              "健康生活",
+              "饮食"
+            ],
+            "description": "合成的授权视频素材"
+          }
+        ]
+      },
+      "cost": 0,
+      "minutes": 1
+    },
+    {
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "premium"
+      },
+      "result": {
+        "ok": true,
+        "variant": "premium",
+        "projected_total": 12,
+        "spent_so_far": 0,
+        "remaining_cost": 12,
+        "projected_finish": "2026-11-11T09:08:00+08:00",
+        "remaining_minutes": 7,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 5,
+        "feasible": false
+      },
+      "cost": 0,
+      "minutes": 0
+    },
+    {
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "lean"
+      },
+      "result": {
+        "ok": true,
+        "variant": "lean",
+        "projected_total": 8,
+        "spent_so_far": 0,
+        "remaining_cost": 8,
+        "projected_finish": "2026-11-11T09:05:00+08:00",
+        "remaining_minutes": 4,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 2,
+        "feasible": false
+      },
+      "cost": 0,
+      "minutes": 0
+    },
+    {
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "basic"
+      },
+      "result": {
+        "ok": true,
+        "variant": "basic",
+        "projected_total": 6,
+        "spent_so_far": 0,
+        "remaining_cost": 6,
+        "projected_finish": "2026-11-11T09:04:00+08:00",
+        "remaining_minutes": 3,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 1,
+        "feasible": false
+      },
+      "cost": 0,
+      "minutes": 0
+    }
+  ],
+  "total_cost": 0,
+  "budget": 20,
+  "elapsed_minutes": 1,
+  "deadline": "2026-11-11T09:03:00+08:00",
+  "selected_variant": "basic",
+  "saved_plan": null,
+  "unmet_constraints": {
+    "variant": "basic",
+    "projected_total": 6,
+    "spent_so_far": 0,
+    "remaining_cost": 6,
+    "projected_finish": "2026-11-11T09:04:00+08:00",
+    "remaining_minutes": 3,
+    "budget_gap": 0,
+    "deadline_gap_minutes": 1,
+    "feasible": false
+  },
+  "preserved_successful_steps": [
+    "search_materials",
+    "estimate_cost:premium",
+    "estimate_cost:lean",
+    "estimate_cost:basic"
+  ],
+  "model_calls": 5,
+  "trace": [
+    {
+      "step": 1,
+      "actor": "model",
+      "action": "search_materials",
+      "arguments": {},
+      "basis": "检索主题相关素材",
+      "observation": {
+        "ok": true,
+        "materials": [
+          {
+            "id": "A01",
+            "title": "城市晨跑片段",
+            "topics": [
+              "健康生活",
+              "运动"
+            ],
+            "description": "合成的授权视频素材"
+          },
+          {
+            "id": "A02",
+            "title": "健康早餐片段",
+            "topics": [
+              "健康生活",
+              "饮食"
+            ],
+            "description": "合成的授权视频素材"
+          }
+        ],
+        "charged": 0,
+        "elapsed_minutes": 1,
+        "cached": false
+      },
+      "next_action": "estimate_cost"
+    },
+    {
+      "step": 2,
+      "actor": "model",
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "premium"
+      },
+      "basis": "估算候选方案的总费用及完成时间",
+      "observation": {
+        "ok": true,
+        "variant": "premium",
+        "projected_total": 12,
+        "spent_so_far": 0,
+        "remaining_cost": 12,
+        "projected_finish": "2026-11-11T09:08:00+08:00",
+        "remaining_minutes": 7,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 5,
+        "feasible": false,
+        "charged": 0,
+        "elapsed_minutes": 0,
+        "cached": false
+      },
+      "next_action": "estimate_cost"
+    },
+    {
+      "step": 3,
+      "actor": "model",
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "lean"
+      },
+      "basis": "估算候选方案的总费用及完成时间",
+      "observation": {
+        "ok": true,
+        "variant": "lean",
+        "projected_total": 8,
+        "spent_so_far": 0,
+        "remaining_cost": 8,
+        "projected_finish": "2026-11-11T09:05:00+08:00",
+        "remaining_minutes": 4,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 2,
+        "feasible": false,
+        "charged": 0,
+        "elapsed_minutes": 0,
+        "cached": false
+      },
+      "next_action": "estimate_cost"
+    },
+    {
+      "step": 4,
+      "actor": "model",
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "basic"
+      },
+      "basis": "估算候选方案的总费用及完成时间",
+      "observation": {
+        "ok": true,
+        "variant": "basic",
+        "projected_total": 6,
+        "spent_so_far": 0,
+        "remaining_cost": 6,
+        "projected_finish": "2026-11-11T09:04:00+08:00",
+        "remaining_minutes": 3,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 1,
+        "feasible": false,
+        "charged": 0,
+        "elapsed_minutes": 0,
+        "cached": false
+      },
+      "next_action": "finish"
+    },
+    {
+      "step": 5,
+      "actor": "model",
+      "action": "finish",
+      "arguments": {},
+      "basis": "没有可行或可执行的剩余方案",
+      "observation": {
+        "finished": true
+      },
+      "next_action": null
+    }
+  ]
+}

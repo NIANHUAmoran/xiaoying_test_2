@@ -1,0 +1,386 @@
+{
+  "request_id": "test2-live-normal",
+  "status": "completed",
+  "reason": null,
+  "missing_fields": [],
+  "mode": "live",
+  "model": "qwen3.8-max",
+  "generated_at": "2026-11-10T16:42:20.710146+00:00",
+  "max_steps": 16,
+  "termination": "finished",
+  "resumed": false,
+  "duplicate": false,
+  "task_plan": [
+    {
+      "step": "search_materials",
+      "depends_on": [],
+      "status": "succeeded"
+    },
+    {
+      "step": "estimate_cost:premium",
+      "depends_on": [
+        "search_materials"
+      ],
+      "status": "succeeded"
+    },
+    {
+      "step": "generate_script:premium",
+      "depends_on": [
+        "estimate_cost:premium"
+      ],
+      "status": "succeeded"
+    },
+    {
+      "step": "save_plan:premium",
+      "depends_on": [
+        "generate_script:premium"
+      ],
+      "status": "succeeded"
+    }
+  ],
+  "steps": {
+    "search_materials": {
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "materials": [
+          {
+            "id": "A01",
+            "title": "城市晨跑片段",
+            "topics": [
+              "健康生活",
+              "运动"
+            ],
+            "description": "合成的授权视频素材"
+          },
+          {
+            "id": "A02",
+            "title": "健康早餐片段",
+            "topics": [
+              "健康生活",
+              "饮食"
+            ],
+            "description": "合成的授权视频素材"
+          }
+        ]
+      }
+    },
+    "estimate_cost:premium": {
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "variant": "premium",
+        "projected_total": 12,
+        "spent_so_far": 0,
+        "remaining_cost": 12,
+        "projected_finish": "2026-11-11T09:08:00+08:00",
+        "remaining_minutes": 7,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 0,
+        "feasible": true
+      }
+    },
+    "generate_script:premium": {
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "variant": "premium",
+        "script_id": "script-12989b54361430d2",
+        "material_ids": [
+          "A01",
+          "A02"
+        ],
+        "script": "主题：健康生活。开场展示 城市晨跑片段；讲解主题要点；结尾邀请观众参与。版本：premium。"
+      }
+    },
+    "save_plan:premium": {
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "plan_id": "plan-acf45165c912708f0b20",
+        "variant": "premium",
+        "theme": "健康生活",
+        "budget": 20,
+        "deadline": "2026-11-11T10:00:00+08:00",
+        "script": {
+          "ok": true,
+          "variant": "premium",
+          "script_id": "script-12989b54361430d2",
+          "material_ids": [
+            "A01",
+            "A02"
+          ],
+          "script": "主题：健康生活。开场展示 城市晨跑片段；讲解主题要点；结尾邀请观众参与。版本：premium。"
+        },
+        "total_cost": 12,
+        "completed_at": "2026-11-11T09:08:00+08:00"
+      }
+    }
+  },
+  "quotes": {
+    "premium": {
+      "ok": true,
+      "variant": "premium",
+      "projected_total": 12,
+      "spent_so_far": 0,
+      "remaining_cost": 12,
+      "projected_finish": "2026-11-11T09:08:00+08:00",
+      "remaining_minutes": 7,
+      "budget_gap": 0,
+      "deadline_gap_minutes": 0,
+      "feasible": true
+    }
+  },
+  "tool_results": [
+    {
+      "action": "search_materials",
+      "arguments": {},
+      "result": {
+        "ok": true,
+        "materials": [
+          {
+            "id": "A01",
+            "title": "城市晨跑片段",
+            "topics": [
+              "健康生活",
+              "运动"
+            ],
+            "description": "合成的授权视频素材"
+          },
+          {
+            "id": "A02",
+            "title": "健康早餐片段",
+            "topics": [
+              "健康生活",
+              "饮食"
+            ],
+            "description": "合成的授权视频素材"
+          }
+        ]
+      },
+      "cost": 0,
+      "minutes": 1
+    },
+    {
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "premium"
+      },
+      "result": {
+        "ok": true,
+        "variant": "premium",
+        "projected_total": 12,
+        "spent_so_far": 0,
+        "remaining_cost": 12,
+        "projected_finish": "2026-11-11T09:08:00+08:00",
+        "remaining_minutes": 7,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 0,
+        "feasible": true
+      },
+      "cost": 0,
+      "minutes": 0
+    },
+    {
+      "action": "generate_script",
+      "arguments": {
+        "variant": "premium"
+      },
+      "result": {
+        "ok": true,
+        "variant": "premium",
+        "script_id": "script-12989b54361430d2",
+        "material_ids": [
+          "A01",
+          "A02"
+        ],
+        "script": "主题：健康生活。开场展示 城市晨跑片段；讲解主题要点；结尾邀请观众参与。版本：premium。"
+      },
+      "cost": 10,
+      "minutes": 6
+    },
+    {
+      "action": "save_plan",
+      "arguments": {
+        "variant": "premium"
+      },
+      "result": {
+        "ok": true,
+        "plan_id": "plan-acf45165c912708f0b20",
+        "variant": "premium",
+        "theme": "健康生活",
+        "budget": 20,
+        "deadline": "2026-11-11T10:00:00+08:00",
+        "script": {
+          "ok": true,
+          "variant": "premium",
+          "script_id": "script-12989b54361430d2",
+          "material_ids": [
+            "A01",
+            "A02"
+          ],
+          "script": "主题：健康生活。开场展示 城市晨跑片段；讲解主题要点；结尾邀请观众参与。版本：premium。"
+        },
+        "total_cost": 12,
+        "completed_at": "2026-11-11T09:08:00+08:00"
+      },
+      "cost": 2,
+      "minutes": 1
+    }
+  ],
+  "total_cost": 12,
+  "budget": 20,
+  "elapsed_minutes": 8,
+  "deadline": "2026-11-11T10:00:00+08:00",
+  "selected_variant": "premium",
+  "saved_plan": {
+    "ok": true,
+    "plan_id": "plan-acf45165c912708f0b20",
+    "variant": "premium",
+    "theme": "健康生活",
+    "budget": 20,
+    "deadline": "2026-11-11T10:00:00+08:00",
+    "script": {
+      "ok": true,
+      "variant": "premium",
+      "script_id": "script-12989b54361430d2",
+      "material_ids": [
+        "A01",
+        "A02"
+      ],
+      "script": "主题：健康生活。开场展示 城市晨跑片段；讲解主题要点；结尾邀请观众参与。版本：premium。"
+    },
+    "total_cost": 12,
+    "completed_at": "2026-11-11T09:08:00+08:00"
+  },
+  "unmet_constraints": null,
+  "preserved_successful_steps": [
+    "search_materials",
+    "estimate_cost:premium",
+    "generate_script:premium",
+    "save_plan:premium"
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_materials",
+      "arguments": {},
+      "basis": "No materials searched yet",
+      "observation": {
+        "ok": true,
+        "materials": [
+          {
+            "id": "A01",
+            "title": "城市晨跑片段",
+            "topics": [
+              "健康生活",
+              "运动"
+            ],
+            "description": "合成的授权视频素材"
+          },
+          {
+            "id": "A02",
+            "title": "健康早餐片段",
+            "topics": [
+              "健康生活",
+              "饮食"
+            ],
+            "description": "合成的授权视频素材"
+          }
+        ],
+        "charged": 0,
+        "elapsed_minutes": 1,
+        "cached": false
+      },
+      "next_action": "estimate_cost"
+    },
+    {
+      "step": 2,
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "premium"
+      },
+      "basis": "materials found; estimate premium first",
+      "observation": {
+        "ok": true,
+        "variant": "premium",
+        "projected_total": 12,
+        "spent_so_far": 0,
+        "remaining_cost": 12,
+        "projected_finish": "2026-11-11T09:08:00+08:00",
+        "remaining_minutes": 7,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 0,
+        "feasible": true,
+        "charged": 0,
+        "elapsed_minutes": 0,
+        "cached": false
+      },
+      "next_action": "generate_script"
+    },
+    {
+      "step": 3,
+      "action": "generate_script",
+      "arguments": {
+        "variant": "premium"
+      },
+      "basis": "premium quote is feasible within budget and deadline",
+      "observation": {
+        "ok": true,
+        "variant": "premium",
+        "script_id": "script-12989b54361430d2",
+        "material_ids": [
+          "A01",
+          "A02"
+        ],
+        "script": "主题：健康生活。开场展示 城市晨跑片段；讲解主题要点；结尾邀请观众参与。版本：premium。",
+        "charged": 10,
+        "elapsed_minutes": 6,
+        "cached": false
+      },
+      "next_action": "save_plan"
+    },
+    {
+      "step": 4,
+      "action": "save_plan",
+      "arguments": {
+        "variant": "premium"
+      },
+      "basis": "premium generation succeeded and plan is unsaved",
+      "observation": {
+        "ok": true,
+        "plan_id": "plan-acf45165c912708f0b20",
+        "variant": "premium",
+        "theme": "健康生活",
+        "budget": 20,
+        "deadline": "2026-11-11T10:00:00+08:00",
+        "script": {
+          "ok": true,
+          "variant": "premium",
+          "script_id": "script-12989b54361430d2",
+          "material_ids": [
+            "A01",
+            "A02"
+          ],
+          "script": "主题：健康生活。开场展示 城市晨跑片段；讲解主题要点；结尾邀请观众参与。版本：premium。"
+        },
+        "total_cost": 12,
+        "completed_at": "2026-11-11T09:08:00+08:00",
+        "charged": 2,
+        "elapsed_minutes": 1,
+        "cached": false
+      },
+      "next_action": "finish"
+    },
+    {
+      "step": 5,
+      "action": "finish",
+      "arguments": {},
+      "basis": "premium plan saved successfully",
+      "observation": {
+        "finished": true
+      },
+      "next_action": null
+    }
+  ]
+}

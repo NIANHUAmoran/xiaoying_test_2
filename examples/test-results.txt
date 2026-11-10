@@ -1,0 +1,35 @@
+test_all_generation_failures_do_not_become_successful (test_agent.PlanningTests.test_all_generation_failures_do_not_become_successful) ... ok
+test_changed_request_or_catalog_is_not_silently_reused (test_agent.PlanningTests.test_changed_request_or_catalog_is_not_silently_reused) ... ok
+test_completed_plan_cannot_spend_more_or_change_persisted_result (test_agent.PlanningTests.test_completed_plan_cannot_spend_more_or_change_persisted_result) ... ok
+test_concurrent_same_step_charges_once (test_agent.PlanningTests.test_concurrent_same_step_charges_once) ... ok
+test_deadline_before_start_does_not_run_paid_work (test_agent.PlanningTests.test_deadline_before_start_does_not_run_paid_work) ... ok
+test_deadline_causes_faster_variant_selection (test_agent.PlanningTests.test_deadline_causes_faster_variant_selection) ... ok
+test_duplicate_finished_task_has_one_plan_and_no_new_events (test_agent.PlanningTests.test_duplicate_finished_task_has_one_plan_and_no_new_events) ... ok
+test_expensive_success_is_not_refunded_when_switching_variant (test_agent.PlanningTests.test_expensive_success_is_not_refunded_when_switching_variant) ... ok
+test_invalid_budget_and_timezone_are_rejected (test_agent.PlanningTests.test_invalid_budget_and_timezone_are_rejected) ... ok
+test_invalid_model_action_does_not_mutate_budget (test_agent.PlanningTests.test_invalid_model_action_does_not_mutate_budget) ... ok
+test_limit_after_save_reports_written_plan_and_incomplete (test_agent.PlanningTests.test_limit_after_save_reports_written_plan_and_incomplete) ... ok
+test_missing_budget_and_deadline_are_not_invented (test_agent.PlanningTests.test_missing_budget_and_deadline_are_not_invented) ... ok
+test_negative_tool_fee_is_not_a_budget_credit (test_agent.PlanningTests.test_negative_tool_fee_is_not_a_budget_credit) ... ok
+test_no_feasible_budget_reports_gap_without_spending (test_agent.PlanningTests.test_no_feasible_budget_reports_gap_without_spending) ... ok
+test_no_feasible_deadline_reports_time_gap (test_agent.PlanningTests.test_no_feasible_deadline_reports_time_gap) ... ok
+test_normal_plan_cost_dependencies_and_persistence (test_agent.PlanningTests.test_normal_plan_cost_dependencies_and_persistence) ... ok
+test_observe_12_then_replan_to_8_within_budget_10 (test_agent.PlanningTests.test_observe_12_then_replan_to_8_within_budget_10) ... ok
+test_repeated_successful_tool_calls_are_cached (test_agent.PlanningTests.test_repeated_successful_tool_calls_are_cached) ... ok
+test_resume_after_failure_reuses_prior_success_and_does_not_double_charge (test_agent.PlanningTests.test_resume_after_failure_reuses_prior_success_and_does_not_double_charge) ... ok
+test_resume_save_after_environment_recovery_reuses_script (test_agent.PlanningTests.test_resume_save_after_environment_recovery_reuses_script) ... ok
+test_save_failure_preserves_generated_script_and_real_charges (test_agent.PlanningTests.test_save_failure_preserves_generated_script_and_real_charges) ... ok
+test_sqlite_save_failure_rolls_back_only_save_and_preserves_prior_steps (test_agent.PlanningTests.test_sqlite_save_failure_rolls_back_only_save_and_preserves_prior_steps) ... ok
+test_step_limit_and_premature_finish_are_incomplete (test_agent.PlanningTests.test_step_limit_and_premature_finish_are_incomplete) ... ok
+test_tool_cannot_bypass_dependencies_or_budget (test_agent.PlanningTests.test_tool_cannot_bypass_dependencies_or_budget) ... ok
+test_transient_failure_replans_and_preserves_successful_search (test_agent.PlanningTests.test_transient_failure_replans_and_preserves_successful_search) ... ok
+test_unmatched_materials_do_not_generate_script (test_agent.PlanningTests.test_unmatched_materials_do_not_generate_script) ... ok
+test_file_loads_known_keys_preserves_equals_and_shell_precedence (test_config.ConfigTests.test_file_loads_known_keys_preserves_equals_and_shell_precedence) ... ok
+test_malformed_file_error_does_not_expose_secret (test_config.ConfigTests.test_malformed_file_error_does_not_expose_secret) ... ok
+test_provider_error_is_sanitized (test_models.ModelTests.test_provider_error_is_sanitized) ... ok
+test_real_adapter_contract_and_secret_not_in_prompt (test_models.ModelTests.test_real_adapter_contract_and_secret_not_in_prompt) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.520s
+
+OK

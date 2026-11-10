@@ -1,0 +1,21 @@
+{
+  "source_output": "duplicate.output.json",
+  "request_id": "test2-normal",
+  "mode": "mock",
+  "model": "offline-mock",
+  "generated_at": "2026-11-10T16:51:31.597988+00:00",
+  "trace": [
+    {
+      "step": 1,
+      "actor": "runtime",
+      "action": "restore_completed_task",
+      "arguments": {},
+      "basis": "同一请求已有保存结果，直接复用",
+      "observation": {
+        "cached": true,
+        "plan_id": "plan-f3435d95e211ff9a8951"
+      },
+      "next_action": null
+    }
+  ]
+}
